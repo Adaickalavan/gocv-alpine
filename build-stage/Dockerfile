@@ -24,13 +24,13 @@ ENV BUILD="ca-certificates \
          libgphoto2 \
          gstreamer \
          gst-plugins-base \
-         gtk2.0"
+         gtk+2.0"
 
 ENV DEV="clang clang-dev cmake pkgconf \
          openblas-dev gstreamer-dev gst-plugins-base-dev \
          libgphoto2-dev libjpeg-turbo-dev libpng-dev \
          tiff-dev jasper-dev libavc1394-dev \
-         gtk2.0-dev"
+         gtk+2.0-dev"
 
 RUN apk update && \
     apk add --no-cache ${BUILD} ${DEV}
