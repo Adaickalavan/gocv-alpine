@@ -24,13 +24,15 @@ ENV BUILD="ca-certificates \
          libgphoto2 \
          gstreamer \
          gst-plugins-base \
-         gtk+2.0"
+         gtk+2.0 \
+         gtkglext"
 
 ENV DEV="clang clang-dev cmake pkgconf \
          openblas-dev gstreamer-dev gst-plugins-base-dev \
          libgphoto2-dev libjpeg-turbo-dev libpng-dev \
          tiff-dev jasper-dev libavc1394-dev \
-         gtk+2.0-dev"
+         gtk+2.0-dev \
+         gtkglext-dev"
 
 RUN apk update && \
     apk add --no-cache ${BUILD} ${DEV}
@@ -49,7 +51,6 @@ RUN mkdir /tmp/opencv && \
     -D WITH_FFMPEG=YES \
     -D WITH_GTK=ON \
     -D WITH_OPENGL=ON \
-    -D WITH_QT=ON \
     -D INSTALL_C_EXAMPLES=NO \
     -D INSTALL_PYTHON_EXAMPLES=NO \
     -D BUILD_ANDROID_EXAMPLES=NO \
