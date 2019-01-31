@@ -48,6 +48,8 @@ RUN mkdir /tmp/opencv && \
     -D OPENCV_EXTRA_MODULES_PATH=/tmp/opencv/opencv_contrib-${OPENCV_VERSION}/modules \
     -D WITH_FFMPEG=YES \
     -D WITH_GTK=ON \
+    -D WITH_OPENGL=ON \
+    -D WITH_QT=ON \
     -D INSTALL_C_EXAMPLES=NO \
     -D INSTALL_PYTHON_EXAMPLES=NO \
     -D BUILD_ANDROID_EXAMPLES=NO \
