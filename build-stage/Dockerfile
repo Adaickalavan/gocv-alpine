@@ -25,14 +25,16 @@ ENV BUILD="ca-certificates \
          gstreamer \
          gst-plugins-base \
          gtk+3.0 \
-         gtkglext "
+         gtkglext \
+         libcanberra-gtk3"
 
 ENV DEV="clang clang-dev cmake pkgconf \
          openblas-dev gstreamer-dev gst-plugins-base-dev \
          libgphoto2-dev libjpeg-turbo-dev libpng-dev \
          tiff-dev jasper-dev libavc1394-dev \
          gtk+3.0-dev \
-         gtkglext-dev "
+         gtkglext-dev \
+         libcanberra-dev"
 
 RUN apk update && \
     apk add --no-cache ${BUILD} ${DEV}
